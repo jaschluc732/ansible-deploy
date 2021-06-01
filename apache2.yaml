@@ -4,11 +4,6 @@
   tasks:
     - name: install apache2
       apt: name=apache2 update_cache=yes state=latest
-         
-    - name: enabled mode_rewrite
-      apache2_module: name=rewrite state=present
-    notify:
-        - restart apache2
         
   handlers:
     - name: restart-apache
